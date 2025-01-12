@@ -1,0 +1,73 @@
+.resume {
+  font-family: Arial, sans-serif;
+  margin: 0 auto;
+  max-width: 800px;
+  line-height: 1.6;
+  color: black;
+  padding: 20px;
+  background-color: rgba(189, 251, 4, 1);
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  color: black;
+}
+
+header p {
+  font-size: 1rem;
+  color: black;
+}
+
+section {
+  margin-bottom: 20px;
+}
+
+section h2 {
+  font-size: 1.5rem;
+  color: black;
+  margin-bottom: 10px;
+}
+
+.education h3,
+.experience h3,
+.projects h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: black;
+}
+
+.education p,
+.experience p,
+.projects p {
+  margin: 5px 0;
+}
+
+/* Updated Skills Section */
+.skills ul {
+  list-style-type: none; /* Remove bullet points */
+  margin-left: 0; /* Remove default indentation */
+  padding-left: 0; /* Remove padding */
+}
+
+.skills li {
+  margin-bottom: 5px;
+}
+
+.experience ul {
+  list-style-type: none;
+}
+
+.experience li {
+  margin-bottom: 5px;
+}
+
+a {
+  color: blue;
+  text-decoration: underline;
+}
