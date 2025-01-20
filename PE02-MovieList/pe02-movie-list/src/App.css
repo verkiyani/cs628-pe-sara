@@ -1,0 +1,50 @@
+.container {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.dropdown {
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.movie-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.movie-card {
+  width: 50%;
+  padding: 20px;
+  margin: 10px 0;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.movie-card:hover {
+  transform: scale(1.02);
+}
+
+.movie-card h2 {
+  margin: 0;
+  color: #333;
+}
+
+.movie-card p {
+  margin: 5px 0;
+  color: #666;
+}
