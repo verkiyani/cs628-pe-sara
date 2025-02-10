@@ -1,4 +1,4 @@
-/* General app styling */
+
 .app {
   text-align: center;
   font-family: Arial, sans-serif;
@@ -39,7 +39,7 @@ button:hover {
   background-color: #0056b3;
 }
 
-/* Styling for ToDo list */
+
 .todo-list {
   width: 60%;
   margin: 0 auto;
