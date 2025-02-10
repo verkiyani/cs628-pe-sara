@@ -1,56 +1,38 @@
-import React, { useState } from "react";
-import "./App.css";
+import React, { useState } from 'react';
+import ToDoList from './ToDoList';
+import './App.css';
 
+function App() {
+  const [todos, setTodos] = useState([]);
+  const [input, setInput] = useState('');
 
-function ToDoItem({ task, onDelete }) {
-  return (
-    <div className="todo-item">
-      <span>{task}</span>
-      <button className="delete-btn" onClick={onDelete}>Delete</button>
-    </div>
-  );
-}
-
-
-function ToDoListApp() {
-  const [toDoList, setToDoList] = useState([]); 
-  const [task, setTask] = useState(""); 
-  const addTask = () => {
-    if (task.trim()) {
-      setToDoList([...toDoList, task]);
-      setTask("");
+  const addTodo = () => {
+    if (input.trim() !== '') {
+      setTodos([...todos, input]);
+      setInput('');
     }
   };
 
-
-  const deleteTask = (index) => {
-    const updatedList = toDoList.filter((_, i) => i !== index);
-    setToDoList(updatedList);
+  const deleteTodo = (index) => {
+    const updatedTodos = todos.filter((_, i) => i !== index);
+    setTodos(updatedTodos);
   };
 
   return (
-    <div className="todo-list-app">
-      <h1>Sara ToDo List App</h1>
+    <div className="app">
+      <h1>ToDo List App</h1>
       <div className="input-container">
         <input
           type="text"
+          value={input}
+          onChange={(e) => setInput(e.target.value)}
           placeholder="Enter task description"
-          value={task}
-          onChange={(e) => setTask(e.target.value)}
         />
-        <button className="add-btn" onClick={addTask}>Add Task</button>
+        <button onClick={addTodo}>Add Task</button>
       </div>
-      <div className="todo-container">
-        {toDoList.map((task, index) => (
-          <ToDoItem
-            key={index}
-            task={task}
-            onDelete={() => deleteTask(index)}
-          />
-        ))}
-      </div>
+      <ToDoList todos={todos} deleteTodo={deleteTodo} />
     </div>
   );
 }
 
-export default ToDoListApp;
+export default App;

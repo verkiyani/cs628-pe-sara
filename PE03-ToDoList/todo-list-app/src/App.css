@@ -1,51 +1,71 @@
-.todo-list-app {
-  width: 300px;
-  margin: auto;
+/* General app styling */
+.app {
   text-align: center;
   font-family: Arial, sans-serif;
+  margin: 20px;
 }
+
+h1 {
+  margin-bottom: 20px;
+}
+
 .input-container {
   display: flex;
   justify-content: center;
-  margin-bottom: 10px;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
 }
+
 input {
-  width: 70%;
-  padding: 5px;
+  width: 300px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
 }
-.add-btn {
-  margin-left: 5px;
-  padding: 5px 10px;
-  background-color: blue;
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
   color: white;
   border: none;
+  border-radius: 5px;
+  font-size: 16px;
   cursor: pointer;
-  border-radius: 8px;
-  width: 40%;
 }
-.todo-container {
-  margin-top: 10px;
+
+button:hover {
+  background-color: #0056b3;
 }
+
+/* Styling for ToDo list */
+.todo-list {
+  width: 60%;
+  margin: 0 auto;
+  text-align: left;
+}
+
 .todo-item {
-  display: flex; 
-  align-items: center; 
-  justify-content: space-between; 
-  background-color: #f9f9f9; 
-  padding: 10px; 
-  border: 1px solid #ddd; 
-  border-radius: 8px; 
-  margin-bottom: 10px; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  background-color: #f9f9f9;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.delete-btn {
-  background-color: #ff4d4d; 
-  color: white; 
-  border: none; 
-  padding: 8px 16px; 
-  border-radius: 8px; 
-  cursor: pointer; 
+.delete-button {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
 }
 
-.delete-btn:hover {
-  background-color: #ff1a1a; 
+.delete-button:hover {
+  background-color: #c82333;
 }
