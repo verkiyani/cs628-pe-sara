@@ -2,10 +2,10 @@ import { NavLink, Outlet } from "react-router-dom";
 
 function Layout() {
     return (
-        <div className="container mt-4">
+        <div>
             {/* Navbar */}
-            <nav className="navbar navbar-expand-lg navbar-light bg-light mb-4">
-                <div className="container-fluid">
+            <nav className="navbar navbar-expand-lg navbar-light bg-light">
+                <div className="container">
                     <NavLink className="navbar-brand" to="/">Recipe Finder</NavLink>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                         <span className="navbar-toggler-icon"></span>
@@ -33,8 +33,10 @@ function Layout() {
                 </div>
             </nav>
 
-            {/* Page Content */}
-            <Outlet />
+            {/* Main Content Area */}
+            <main className="container mt-4">
+                <Outlet />
+            </main>
         </div>
     );
 }
